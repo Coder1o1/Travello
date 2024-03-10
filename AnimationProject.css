@@ -1,0 +1,173 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;  
+}
+
+nav 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    position: absolute;
+    width: 100vw;
+}
+
+@keyframes tittleAnim
+{
+    from
+    {
+        left: -200px;
+    }
+    to
+    {
+        left: 0px;
+    }
+}
+
+@keyframes ulAnim
+{
+    from
+    {
+        top: -200px;
+    }
+    to
+    {
+        top: 0px;
+    }
+}
+
+@keyframes h2Anim
+{
+    from
+    {
+       transform: scale(1.5);
+    }
+    to
+    {
+        transform: scale(1);
+    }
+}
+
+nav h2
+{
+    font-size: 2rem;
+    transition: 1s;
+    animation-name: tittleAnim;
+    animation-duration: 2s;
+    position: relative;
+}
+
+nav ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    list-style: none;
+    position: relative;
+    animation-name: ulAnim;
+    animation-duration: 2s;
+}
+
+nav ul li
+{
+    font-size: 1rem;
+}
+
+nav ul li:hover
+{
+    background: linear-gradient(to  left,red,blue);
+    font-size: 2rem;
+    border-radius: .5rem;
+}
+
+main
+{
+    height: 100vh;
+    background-image: url("https://images5.alphacoders.com/132/1328245.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#Contents
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Line
+{
+    background-color: yellow;
+    width: 250px;
+    height: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#button
+{
+    background-color: white;
+    color: black;
+    width: 10rem;
+    height: 2rem;
+    margin: 2rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .8rem;
+    position: relative;
+}
+
+#button::after
+{
+    content: '';
+    width: 0%;
+    height: .1rem;
+    position: absolute;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    left: 0;
+    border-radius: 0.8rem;
+    transition: 1s;
+}
+
+#button:hover::after
+{
+    width: 100%;
+}
+
+main h2
+{
+    font-size: 4rem;
+    position: relative;
+    animation-name: h2Anim;
+    animation-duration: 2s;
+    transition: 2s;
+}
+
+@media screen and (max-width:712px) {
+    
+    main h2
+    {
+        text-align: center;
+    }
+
+}
